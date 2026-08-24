@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مطبعة عبد الرحمن أبو شرف | Luxury Wedding Card</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3ECDB;
+  --paper-deep:#E9DFC4;
+  --ink:#211B14;
+  --ink-soft:#4A4032;
+  --gold:#B08A34;
+  --gold-light:#D8B463;
+  --wine:#6E1B26;
+  --wine-deep:#4A0F17;
+  --navy:#111E38;
+  --emerald:#0F3B2E;
+  --line:#D8C79C;
+}
+*{box-sizing:border-box}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+}
+.font-display{font-family:'Amiri',serif;}
+.font-script{font-family:'Great Vibes',cursive; line-height:1;}
+.font-mono{font-family:'JetBrains Mono',monospace;}
+
+.grain{position:relative;isolation:isolate;}
+.grain::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hairline{border-color:var(--line);}
+.eyebrow{letter-spacing:.14em;}
+
+/* تحسين إطار وعرض الصور باحترافية استوديو */
+.product-mockup-frame {
+  background: radial-gradient(circle at center, rgba(216, 180, 99, 0.15) 0%, rgba(17, 30, 56, 0.95) 100%);
+  border: 1px solid rgba(216, 180, 99, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(216, 180, 99, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-card{
+  border-radius:12px;
+  background:#fffdf8;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 24px 45px -15px rgba(20,15,8,.3);
+  border-color:var(--gold);
+}
+
+.pill{
+  border-radius:999px;
+  transition:all .2s ease;
+}
+.pill.active{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+
+.btn-gold{
+  background:linear-gradient(180deg, var(--gold-light), var(--gold));
+  color:#241B0B;
+  transition:filter .2s ease, transform .2s ease;
+}
+.btn-gold:hover{filter:brightness(1.08); transform:translateY(-1px);}
+
+.btn-ink{
+  background:var(--wine-deep);
+  color:var(--paper);
+}
+.btn-ink:hover{background:var(--wine);}
+
+.divider-torn{
+  height:14px;
+  background:
+    linear-gradient(135deg, var(--paper) 25%, transparent 25.5%) 0 0,
+    linear-gradient(225deg, var(--paper) 25%, transparent 25.5%) 0 0;
+  background-size:14px 14px;
+  background-color:var(--ink);
+}
+
+::selection{background:var(--gold-light); color:var(--ink);}
+.whatsapp-float{box-shadow:0 10px 24px -8px rgba(0,0,0,.4);}
+
+/* Hero Slider Styles */
+.hero-card-slide {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0.85) translateY(20px);
+  pointer-events: none;
+}
+.hero-card-slide.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ===================== الهيدر ===================== -->
+<header class="bg-[var(--paper)]/95 backdrop-blur-sm sticky top-0 z-50 border-b hairline">
+  <div class="max-w-7xl mx-auto px-4 py-2.5 sm:py-3 flex justify-between items-center">
+    <div class="flex items-center gap-3 min-w-0">
+      <div class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-lg overflow-hidden border border-[var(--gold)]/50 bg-[#111E38] flex items-center justify-center shadow-md">
+        <img src="./Screenshot 2026-08-24 133158.png" alt="لوجو مطبعة عبد الرحمن أبو شرف" class="w-full h-full object-cover">
+      </div>
+      <div class="min-w-0">
+        <div class="flex items-baseline gap-2">
+          <h1 class="font-display font-bold text-base sm:text-lg text-[var(--ink)] leading-tight truncate">مطبعة عبد الرحمن أبو شرف</h1>
+        </div>
+        <p class="text-[10px] sm:text-[11px] text-[var(--ink-soft)] eyebrow hidden xs:block truncate">Luxury Wedding Card · غزة، فلسطين</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-7 text-sm font-medium text-[var(--ink-soft)]">
+      <a href="#catalog" class="hover:text-[var(--wine)] transition">الكتالوج</a>
+      <a href="#how" class="hover:text-[var(--wine)] transition">آلية الطلب</a>
+      <a href="#contact" class="hover:text-[var(--wine)] transition">تواصل</a>
+    </nav>
+    <div class="flex items-center gap-2 shrink-0">
+      <a href="#catalog" class="btn-gold px-3 sm:px-4 py-2 rounded-md text-[11px] sm:text-sm font-bold transition whitespace-nowrap">تصفّح التشكيلة</a>
+      <button onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 flex items-center justify-center rounded-md border hairline text-[var(--ink-soft)] cursor-pointer"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden border-t hairline bg-[var(--paper)] px-4 py-3 flex flex-col gap-3 text-sm font-medium text-[var(--ink-soft)]">
+    <a href="#catalog" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">الكتالوج</a>
+    <a href="#how" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">آلية الطلب</a>
+    <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">تواصل</a>
+  </nav>
+</header>
+
+<!-- ===================== الهيرو (مع إطار استوديو عرض المنتجات) ===================== -->
+<section class="grain relative overflow-hidden" style="background:linear-gradient(180deg, #111E38 0%, #171209 100%);">
+  <div class="max-w-7xl mx-auto px-4 py-14 md:py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="text-right">
+      <span class="inline-block text-[11px] eyebrow font-semibold uppercase text-[var(--gold-light)] border border-[var(--gold)]/40 rounded-full px-3.5 py-1.5">مطبعة عبد الرحمن أبو شرف — غزة</span>
+      <span class="font-script text-5xl md:text-6xl text-[var(--gold-light)] block mt-4">Luxury Wedding Card</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--paper)] mt-3 mb-5 leading-[1.3]">
+        أفراحكم تليق بأفخم الكروت الملكية،<br><span class="text-[var(--gold-light)]">بأختام شمعية وزهور طبيعية مجففة</span>
+      </h2>
+      <p class="text-[#D8CDB8] text-sm md:text-base leading-relaxed max-w-md mb-8">
+        استعرض تشكيلتنا المختارة من كروت الكحلي الفاخر، الأخضر الزمردي، والعنابي المخملي المجهزة خصيصاً لتخلل مناسباتكم بذوق رفيع.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#catalog" class="btn-gold px-6 py-3 rounded-md font-bold text-sm shadow-lg">اطلب تصميمك الآن</a>
+        <a href="https://wa.me/972597501000" target="_blank" class="border border-[var(--gold)]/40 text-[var(--paper)] hover:bg-white/5 px-6 py-3 rounded-md text-sm font-medium transition flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> تواصل واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- نافذة عرض استوديو احترافية (Mockup Display) -->
+    <div class="relative flex flex-col items-center justify-center">
+      <div class="relative w-full max-w-[320px] h-[410px] product-mockup-frame p-3 rounded-2xl flex items-center justify-center overflow-hidden">
+        
+        <!-- شريط علوي صغير يحاكي واجهة العرض الفاخرة -->
+        <div class="absolute top-3 inset-x-4 flex justify-between items-center text-[10px] text-[var(--gold-light)] uppercase tracking-wider z-20 bg-black/40 px-3 py-1 rounded-full backdrop-blur-md">
+          <span>✨ عينة ملكية فاخرة</span>
+          <span class="font-mono">LIMITED EDITION</span>
+        </div>
+
+        <!-- الشرائح الاحترافية -->
+        <div class="hero-card-slide active w-full h-full pt-10 pb-3 px-1 flex flex-col justify-center items-center">
+          <img src="./Screenshot 2026-08-24 132404.png" alt="الكرت الكحلي الملكي" class="w-full h-full object-cover rounded-lg shadow-2xl filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.6)]">
+        </div>
+
+        <div class="hero-card-slide w-full h-full pt-10 pb-3 px-1 flex flex-col justify-center items-center">
+          <img src="./Screenshot 2026-08-24 165109.png" alt="الأخضر الزمردي الفاخر" class="w-full h-full object-cover rounded-lg shadow-2xl filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.6)]">
+        </div>
+
+        <div class="hero-card-slide w-full h-full pt-10 pb-3 px-1 flex flex-col justify-center items-center">
+          <img src="Screenshot 2026-08-24 132616.png" alt="الكرت العنابي الفاخر" class="w-full h-full object-cover rounded-lg shadow-2xl filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.6)]">
+        </div>
+
+      </div>
+
+      <!-- أزرار التنقل للسلايدر -->
+      <div class="flex items-center gap-4 mt-5 z-20">
+        <button onclick="prevHeroSlide()" class="w-10 h-10 rounded-full bg-black/40 hover:bg-[var(--gold)] text-white flex items-center justify-center transition cursor-pointer border border-[var(--gold)]/30"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+        <div class="flex gap-2" id="heroDots">
+          <button onclick="setHeroSlide(0)" class="w-3 h-3 rounded-full bg-[var(--gold-light)] transition cursor-pointer"></button>
+          <button onclick="setHeroSlide(1)" class="w-3 h-3 rounded-full bg-white/30 transition cursor-pointer"></button>
+          <button onclick="setHeroSlide(2)" class="w-3 h-3 rounded-full bg-white/30 transition cursor-pointer"></button>
+        </div>
+        <button onclick="nextHeroSlide()" class="w-10 h-10 rounded-full bg-black/40 hover:bg-[var(--gold)] text-white flex items-center justify-center transition cursor-pointer border border-[var(--gold)]/30"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider-torn"></div>
+
+<!-- ===================== الكتالوج مع عرض المنتجات الاحترافي ===================== -->
+<section id="catalog" class="max-w-7xl mx-auto px-4 py-16">
+  <div class="text-center mb-10">
+    <span class="text-[11px] eyebrow font-semibold uppercase text-[var(--gold)]">كتالوج عينات المنتجات</span>
+    <h3 class="font-display text-2xl md:text-3xl font-bold text-[var(--ink)] mt-2">اختر الصنف وابدأ طلبك الفوري</h3>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-2 mb-10" id="filter-buttons">
+    <button onclick="filterProducts('all', this)" class="category-btn pill active px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer shadow-sm">الكل</button>
+    <button onclick="filterProducts('weddings', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer shadow-sm">💍 كروت الأعراس الفاخرة</button>
+    <button onclick="filterProducts('boxes', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer shadow-sm">📦 كراتين وبوكسات</button>
+    <button onclick="filterProducts('wraps', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer shadow-sm">🍔 تغليف المطاعم</button>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" id="products-grid">
+    
+    <!-- كرت 1 (صورة الكحلي) -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="weddings" data-id="WD-NAVY" data-name="الكرت الكحلي الملكي بزهور مجففة وختم شمعي" data-price="0.65">
+      <div>
+        <div class="h-64 overflow-hidden relative bg-[#09101d] p-3 flex items-center justify-center border-b border-[var(--gold)]/20">
+          <span class="card-tag absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-[10px] font-semibold px-2.5 py-1 rounded-md text-[var(--gold-light)] border border-[var(--gold)]/30 shadow">WD-01</span>
+          <img src="./Screenshot 2026-08-24 132404.png" alt="الكرت الكحلي الملكي" class="w-full h-full object-cover hover:scale-105 transition duration-500 filter drop-shadow-md">
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] bg-blue-100 text-blue-900 px-2 py-0.5 rounded font-medium">كروت أعراس</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">الكرت الكحلي الملكي بزهور مجففة وختم شمعي</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">مرفق بشريط ساتان شبه شفّاف، ختم شمعي ذهبي، وزهور طبيعية مجففة.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.65 $ / للكرت</span>
+        </div>
+        <button onclick="openQuickOrder('WD-01', 'الكرت الكحلي الملكي بزهور مجففة وختم شمعي', 0.65)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer shadow">اطلب الآن</button>
+      </div>
+    </div>
+
+    <!-- كرت 2 (صورة الأخضر الزمردي) -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="weddings" data-id="WD-EMERALD" data-name="كرت الأخضر الزمردي بختم شمعي وزهور" data-price="0.60">
+      <div>
+        <div class="h-64 overflow-hidden relative bg-[#07241c] p-3 flex items-center justify-center border-b border-[var(--gold)]/20">
+          <span class="card-tag absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-[10px] font-semibold px-2.5 py-1 rounded-md text-[var(--gold-light)] border border-[var(--gold)]/30 shadow">WD-02</span>
+          <img src="./Screenshot 2026-08-24 132639.png" alt="كرت الأخضر الزمردي" class="w-full h-full object-cover hover:scale-105 transition duration-500 filter drop-shadow-md">
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded font-medium">كروت أعراس</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">كرت الأخضر الزمردي بختم شمعي وزهور</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">تصميم أخضر فاخر مع طباعة ذهبية براقة وإطار بيضاوي أنيق.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.60 $ / للكرت</span>
+        </div>
+        <button onclick="openQuickOrder('WD-02', 'كرت الأخضر الزمردي بختم شمعي وزهور', 0.60)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer shadow">اطلب الآن</button>
+      </div>
+    </div>
+
+    <!-- كرت 3 (صورة الأبيض والزهري) -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="weddings" data-id="WD-MAROON" data-name="الكرت الأبيض الملكي بلمسات وردية وزهور" data-price="0.60">
+      <div>
+        <div class="h-64 overflow-hidden relative bg-[#38090f] p-3 flex items-center justify-center border-b border-[var(--gold)]/20">
+          <span class="card-tag absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-[10px] font-semibold px-2.5 py-1 rounded-md text-[var(--gold-light)] border border-[var(--gold)]/30 shadow">WD-03</span>
+          <img src="./Screenshot 2026-08-24 165109.png" alt="الكرت الملكي الأبيض" class="w-full h-full object-cover hover:scale-105 transition duration-500 filter drop-shadow-md">
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] bg-rose-100 text-rose-900 px-2 py-0.5 rounded font-medium">كروت أعراس</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">الكرت الأبيض الملكي بلمسات وردية وزهور</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">خامة أنيقة مميزة مطرزة بالذهبي مع ختم شمعي راقٍ وزهور مجففة رقيقة.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.60 $ / للكرت</span>
+        </div>
+        <button onclick="openQuickOrder('WD-03', 'الكرت الأبيض الملكي بلمسات وردية وزهور', 0.60)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer shadow">اطلب الآن</button>
+      </div>
+    </div>
+
+    <!-- منتج 4 (صورة رولات الملصقات) -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="boxes" data-id="BX-01" data-name="رولات ملصقات الشعار البارزة (للبوكسات والمطاعم)" data-price="0.10">
+      <div>
+        <div class="h-64 overflow-hidden relative bg-[#111E38] p-3 flex items-center justify-center border-b border-[var(--gold)]/20">
+          <span class="card-tag absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-[10px] font-semibold px-2.5 py-1 rounded-md text-[var(--gold-light)] border border-[var(--gold)]/30 shadow">BX-01</span>
+          <img src="./Screenshot 2026-08-24 165237.png" alt="رولات ملصقات الشعار" class="w-full h-full object-cover hover:scale-105 transition duration-500 filter drop-shadow-md">
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-medium">تغليف مطاعم</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">رولات ملصقات الشعار البارزة</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">لاصق احترافي عالي الجودة مطبوع بشعار هويتك ومقاوم للتلف.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.10 $ / للقطعة</span>
+        </div>
+        <button onclick="openQuickOrder('BX-01', 'رولات ملصقات الشعار البارزة (للبوكسات والمطاعم)', 0.10)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer shadow">اطلب الآن</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- نافذة الطلب السريع -->
+<div id="orderModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div class="bg-[var(--paper)] max-w-lg w-full p-6 shadow-2xl relative rounded-xl border hairline">
+    <button onclick="closeOrderModal()" class="absolute top-4 left-4 text-[var(--ink-soft)] hover:text-[var(--wine)] text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+    
+    <div class="flex items-center gap-3 pb-4 border-b hairline mb-4">
+      <div class="w-10 h-10 rounded-lg bg-[var(--wine-deep)] text-[var(--paper)] flex items-center justify-center text-lg font-bold">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <div>
+        <h4 id="modalItemTitle" class="font-display font-bold text-lg text-[var(--ink)]">اسم المنتج</h4>
+        <p class="text-xs text-[var(--wine)] font-semibold" id="modalItemPrice">السعر</p>
+      </div>
+    </div>
+
+    <form onsubmit="submitOrder(event)" class="space-y-4">
+      <input type="hidden" id="inputProductId">
+      <input type="hidden" id="inputProductName">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">اسم العميل / المنشأة <span class="text-red-600">*</span></label>
+          <input id="orderName" type="text" required class="w-full bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]" placeholder="مثال: عريسنا محمد...">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">رقم الجوال (واتساب) <span class="text-red-600">*</span></label>
+          <input id="orderPhone" type="tel" required class="w-full bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]" placeholder="059xxxxxxx">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">الكمية المطلوبة <span class="text-red-600">*</span></label>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="adjustQty(-50)" class="bg-white border hairline px-3 py-2 rounded-md text-sm font-bold cursor-pointer hover:bg-stone-100">-</button>
+            <input id="orderQty" type="number" min="50" value="300" required class="w-full text-center bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]">
+            <button type="button" onclick="adjustQty(50)" class="bg-white border hairline px-3 py-2 rounded-md text-sm font-bold cursor-pointer hover:bg-stone-100">+</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">التكلفة التقريبية الإجمالية</label>
+          <div id="totalEstimation" class="w-full bg-white/70 border hairline rounded-md px-3 py-2 text-sm font-bold text-[var(--wine)] flex items-center justify-center">
+            0.00 $
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">تفاصيل النصوص أو الأسماء أو الملاحظات</label>
+        <textarea id="orderNotes" rows="2" class="w-full bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]" placeholder="اكتب أسماء العروسين، التاريخ، الملاحظات..."></textarea>
+      </div>
+
+      <div class="pt-2">
+        <button type="submit" class="btn-gold w-full font-bold py-3 rounded-md text-sm transition cursor-pointer flex items-center justify-center gap-2 shadow-md">
+          <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب واعتماده فوراً
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- زر واتساب عائم -->
+<a href="https://wa.me/972597501000" target="_blank" class="whatsapp-float fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center text-white text-2xl transition">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- التذييل -->
+<footer class="bg-[var(--ink)] text-[#B9AD91] py-8 text-center text-xs border-t hairline">
+  <p>جميع الحقوق محفوظة © 2026 - مطبعة عبد الرحمن أبو شرف · 059-750-1000 | تطوير البرمجيات (Al-Nakhal Software Solutions)</p>
+</footer>
+
+<script>
+const SHOP_WHATSAPP = '972597501000';
+let activeUnitPrice = 0;
+
+let currentHeroIndex = 0;
+const heroSlides = document.querySelectorAll('.hero-card-slide');
+const dotButtons = document.querySelectorAll('#heroDots button');
+
+function setHeroSlide(index) {
+  heroSlides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  dotButtons.forEach((dot, i) => {
+    dot.classList.toggle('bg-[var(--gold-light)]', i === index);
+    dot.classList.toggle('bg-white/30', i !== index);
+  });
+  currentHeroIndex = index;
+}
+
+function nextHeroSlide() {
+  currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+  setHeroSlide(currentHeroIndex);
+}
+
+function prevHeroSlide() {
+  currentHeroIndex = (currentHeroIndex - 1 + heroSlides.length) % heroSlides.length;
+  setHeroSlide(currentHeroIndex);
+}
+
+setInterval(nextHeroSlide, 4500);
+
+function filterProducts(category, btn){
+  document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.display = (category === 'all' || card.getAttribute('data-category') === category) ? 'flex' : 'none';
+  });
+}
+
+function openQuickOrder(id, name, price){
+  activeUnitPrice = price;
+  document.getElementById('inputProductId').value = id;
+  document.getElementById('inputProductName').value = name;
+  document.getElementById('modalItemTitle').innerText = name;
+  document.getElementById('modalItemPrice').innerText = price > 0 ? `السعر التقديري: ${price} $ للقطعة` : 'السعر يعتمد على الكمية';
+  
+  updateTotalEstimation();
+  document.getElementById('orderModal').classList.remove('hidden');
+}
+
+function closeOrderModal(){
+  document.getElementById('orderModal').classList.add('hidden');
+}
+
+function adjustQty(amount){
+  const qtyInput = document.getElementById('orderQty');
+  let val = parseInt(qtyInput.value) || 50;
+  val += amount;
+  if(val < 10) val = 10;
+  qtyInput.value = val;
+  updateTotalEstimation();
+}
+
+document.getElementById('orderQty').addEventListener('input', updateTotalEstimation);
+
+function updateTotalEstimation(){
+  const qty = parseInt(document.getElementById('orderQty').value) || 0;
+  const total = qty * activeUnitPrice;
+  const estimationEl = document.getElementById('totalEstimation');
+  if(activeUnitPrice > 0){
+    estimationEl.innerText = `${total.toFixed(2)} $ (تقريبي)`;
+  } else {
+    estimationEl.innerText = `يُحدد لاحقاً حسب الكمية`;
+  }
+}
+
+function submitOrder(e){
+  e.preventDefault();
+
+  const id    = document.getElementById('inputProductId').value;
+  const pName = document.getElementById('inputProductName').value;
+  const name  = document.getElementById('orderName').value.trim();
+  const phone = document.getElementById('orderPhone').value.trim();
+  const qty   = document.getElementById('orderQty').value.trim();
+  const notes = document.getElementById('orderNotes').value.trim();
+
+  const lines = [
+    '🔔 *طلب جديد عبر موقع مطبعة عبد الرحمن أبو شرف*',
+    `📦 الصنف: [${id}] ${pName}`,
+    `🔢 الكمية: ${qty}`,
+    `👤 اسم العميل: ${name}`,
+    `📱 جوال التواصل: ${phone}`,
+  ];
+  if(notes) lines.push(`📝 ملاحظات: ${notes}`);
+
+  const message = encodeURIComponent(lines.join('\n'));
+  window.open(`https://wa.me/${SHOP_WHATSAPP}?text=${message}`, '_blank');
+
+  closeOrderModal();
+}
+
+function toggleMobileMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+}
+</script>
+</body>
+</html>
