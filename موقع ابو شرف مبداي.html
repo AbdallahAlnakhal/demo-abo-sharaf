@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطبعة أبو شرف | كروت الأعراس وتغليفات المطاعم الفاخرة</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .category-btn.active {
+            background-color: #d97706;
+            color: white;
+            border-color: #d97706;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <!-- شريط التنقل العلوي -->
+    <header class="bg-white/95 backdrop-blur-md shadow-xs sticky top-0 z-50 border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="bg-amber-600 text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg shadow-sm">
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base text-stone-900 leading-tight">مطبعة أبو شرف</h1>
+                    <p class="text-xs text-stone-500">كروت أفراح ملكية وتغليفات تجارية للمطاعم</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 space-x-reverse text-sm font-medium text-stone-600">
+                <a href="#" class="hover:text-amber-600 transition">الرئيسية</a>
+                <a href="#catalog" class="hover:text-amber-600 transition">المنتجات والكتالوج</a>
+                <a href="#integration" class="hover:text-amber-600 transition">الربط مع نظام المحاسبة</a>
+                <a href="#contact" class="hover:text-amber-600 transition">اتصل بنا</a>
+            </nav>
+            <a href="#catalog" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition shadow-xs">اطلب تصميمك الآن</a>
+        </div>
+    </header>
+
+    <!-- الواجهة الرئيسية (Hero Section) -->
+    <section class="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white py-20 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider font-semibold">إبداع في الطباعة والتغليف في غزة</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-5 mb-6 leading-tight">تميز في كروت الأعراس <br><span class="text-amber-400">وتغليفات المطاعم الفاخرة</span></h2>
+            <p class="text-stone-300 text-sm md:text-base mb-8 max-w-xl mx-auto leading-relaxed">من كروت المخمل والختم الشمعي الفاخر للمناسبات، إلى بوكسات المشاركة وكراتين الوجبات وتغليفات الساندويشات للمطاعم بجودة طباعة عالمية.</p>
+            <div class="flex justify-center gap-3">
+                <a href="#catalog" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-md text-sm">تصفح التشكيلة والأسعار</a>
+                <a href="https://wa.me/" target="_blank" class="bg-stone-800 hover:bg-stone-700 border border-stone-700 text-stone-200 font-medium px-6 py-3 rounded-xl transition text-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> تواصل عبر الواتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الكتالوج والمنتجات -->
+    <section id="catalog" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-10">
+            <h3 class="text-2xl md:text-3xl font-bold text-stone-900">كتالوج المنتجات والخدمات</h3>
+            <p class="text-stone-500 text-sm mt-2">اختر التصنيف لاستعراض الأعمال والأسعار التقديرية</p>
+        </div>
+
+        <!-- أزرار الفلترة -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10" id="filter-buttons">
+            <button onclick="filterProducts('all')" class="category-btn active px-4 py-2 rounded-xl text-xs md:text-sm font-semibold bg-white text-stone-700 border border-stone-200 transition shadow-xs cursor-pointer">الكل</button>
+            <button onclick="filterProducts('weddings')" class="category-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold bg-white text-stone-700 border border-stone-200 transition shadow-xs cursor-pointer">💍 كروت الأعراس الفاخرة</button>
+            <button onclick="filterProducts('boxes')" class="category-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold bg-white text-stone-700 border border-stone-200 transition shadow-xs cursor-pointer">📦 كراتين وبوكسات المطاعم</button>
+            <button onclick="filterProducts('wraps')" class="category-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold bg-white text-stone-700 border border-stone-200 transition shadow-xs cursor-pointer">🍔 تغليف الساندويش والورق</button>
+            <button onclick="filterProducts('stickers')" class="category-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold bg-white text-stone-700 border border-stone-200 transition shadow-xs cursor-pointer">🏷️ الستكرز والملصقات</button>
+        </div>
+
+        <!-- شبكة المنتجات -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" id="products-grid">
+            
+            <!-- منتج 1: كرت مخملي -->
+            <div class="product-card bg-white rounded-2xl shadow-xs border border-stone-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between" data-category="weddings">
+                <div>
+                    <div class="h-48 bg-stone-900 text-amber-400 flex items-center justify-center text-xl font-bold relative">
+                        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-semibold px-2.5 py-1 rounded-md text-stone-700 shadow-xs">كود: WD-01</span>
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-envelope-open-text text-3xl mb-2 text-amber-500 block"></i>
+                            <span class="text-xs text-stone-200 font-semibold">كروت أفراح مخملية بالختم الشمعي</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md font-medium">كروت أعراس</span>
+                        <h4 class="font-bold text-base text-stone-900 mt-1">الكرت الملكي المخمل (أسود وذهبي)</h4>
+                        <p class="text-stone-500 text-xs mt-1 leading-relaxed">ورق مخملي فاخر مع ختم شمعي بارز وطباعة ذهبية راقية.</p>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-stone-50 mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-stone-400 block">السعر التقريبي</span>
+                        <span class="font-bold text-amber-700 text-sm">0.50 $ / للكرت</span>
+                    </div>
+                    <button onclick="openOrderModal('الكرت الملكي المخمل', '0.50 $')" class="bg-stone-900 hover:bg-amber-600 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition cursor-pointer">اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 2: بوكس مشاركة -->
+            <div class="product-card bg-white rounded-2xl shadow-xs border border-stone-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between" data-category="boxes">
+                <div>
+                    <div class="h-48 bg-amber-400 text-stone-900 flex items-center justify-center text-xl font-bold relative">
+                        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-semibold px-2.5 py-1 rounded-md text-stone-700 shadow-xs">كود: BX-01</span>
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-box-open text-3xl mb-2 text-stone-900 block"></i>
+                            <span class="text-xs text-stone-900 font-bold">بوكس المشاركة (Sharing Box)</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] bg-orange-100 text-orange-800 px-2 py-0.5 rounded-md font-medium">تغليف مطاعم</span>
+                        <h4 class="font-bold text-base text-stone-900 mt-1">كرتون برجر ووجبات (بوكس مشاركة)</h4>
+                        <p class="text-stone-500 text-xs mt-1 leading-relaxed">تصميم خاص مطبوع بشعار المطعم، ورق صحي مقاوم للزيوت.</p>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-stone-50 mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-stone-400 block">السعر التقريبي</span>
+                        <span class="font-bold text-amber-700 text-sm">0.10 $ / للقطعة</span>
+                    </div>
+                    <button onclick="openOrderModal('كرتون بوكس المشاركة', '0.10 $')" class="bg-stone-900 hover:bg-amber-600 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition cursor-pointer">اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 3: كرت أبيض فخم -->
+            <div class="product-card bg-white rounded-2xl shadow-xs border border-stone-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between" data-category="weddings">
+                <div>
+                    <div class="h-48 bg-stone-100 text-stone-700 flex items-center justify-center text-xl font-bold relative">
+                        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-semibold px-2.5 py-1 rounded-md text-stone-700 shadow-xs">كود: WD-02</span>
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-heart text-3xl mb-2 text-amber-600 block"></i>
+                            <span class="text-xs text-stone-700 font-semibold">كروت أفراح بيضاء بربطة شريطة</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md font-medium">كروت أعراس</span>
+                        <h4 class="font-bold text-base text-stone-900 mt-1">الكرت الكلاسيكي مع الشريطة الحريرية</h4>
+                        <p class="text-stone-500 text-xs mt-1 leading-relaxed">أناقة باللون الأبيض الناصع مع شريطة أنيقة وطباعة بارزة.</p>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-stone-50 mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-stone-400 block">السعر التقريبي</span>
+                        <span class="font-bold text-amber-700 text-sm">0.35 $ / للكرت</span>
+                    </div>
+                    <button onclick="openOrderModal('الكرت الكلاسيكي بالشريطة', '0.35 $')" class="bg-stone-900 hover:bg-amber-600 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition cursor-pointer">اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 4: ورق تغليف ساندويش -->
+            <div class="product-card bg-white rounded-2xl shadow-xs border border-stone-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between" data-category="wraps">
+                <div>
+                    <div class="h-48 bg-emerald-50 text-emerald-800 flex items-center justify-center text-xl font-bold relative">
+                        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-semibold px-2.5 py-1 rounded-md text-stone-700 shadow-xs">كود: WR-01</span>
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-scroll text-3xl mb-2 text-emerald-600 block"></i>
+                            <span class="text-xs text-stone-700 font-semibold">ورق تغليف مطبوع للمطاعم</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md font-medium">ورق مطاعم</span>
+                        <h4 class="font-bold text-base text-stone-900 mt-1">ورق ساندويش مانع للزيوت (شعار مطعمك)</h4>
+                        <p class="text-stone-500 text-xs mt-1 leading-relaxed">مطبوع بالألوان الخاصة بهوية مطعمك، ممتاز للساندويشات والبرجر.</p>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-stone-50 mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-stone-400 block">السعر التقريبي</span>
+                        <span class="font-bold text-amber-700 text-sm">حسب الكمية</span>
+                    </div>
+                    <button onclick="openOrderModal('ورق تغليف ساندويش مطبوع', 'حسب الكمية')" class="bg-stone-900 hover:bg-amber-600 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition cursor-pointer">اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 5: ستكرز وملصقات -->
+            <div class="product-card bg-white rounded-2xl shadow-xs border border-stone-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between" data-category="stickers">
+                <div>
+                    <div class="h-48 bg-sky-50 text-sky-800 flex items-center justify-center text-xl font-bold relative">
+                        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-semibold px-2.5 py-1 rounded-md text-stone-700 shadow-xs">كود: ST-01</span>
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-tags text-3xl mb-2 text-sky-600 block"></i>
+                            <span class="text-xs text-stone-700 font-semibold">ملصقات وعلامات تجارية</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded-md font-medium">ملصقات</span>
+                        <h4 class="font-bold text-base text-stone-900 mt-1">ستكرز إغلاق العلب والمنتجات</h4>
+                        <p class="text-stone-500 text-xs mt-1 leading-relaxed">لاصق قوي مقاوم للرطوبة بتصميم وقص مخصص حسب الطلب.</p>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-stone-50 mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-stone-400 block">السعر التقريبي</span>
+                        <span class="font-bold text-amber-700 text-sm">0.02 $ / للقطعة</span>
+                    </div>
+                    <button onclick="openOrderModal('ستكرز إغلاق العلب', '0.02 $')" class="bg-stone-900 hover:bg-amber-600 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition cursor-pointer">اطلب الآن</button>
+                </div>
+            </div>
+
+            <!-- منتج 6: علبة حلويات / عصير -->
+            <div class="product-card bg-white rounded-2xl shadow-xs border border-stone-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between" data-category="boxes">
+                <div>
+                    <div class="h-48 bg-emerald-900 text-emerald-100 flex items-center justify-center text-xl font-bold relative">
+                        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-semibold px-2.5 py-1 rounded-md text-stone-700 shadow-xs">كود: BX-02</span>
+                        <div class="text-center p-4">
+                            <i class="fa-solid fa-box text-3xl mb-2 text-emerald-400 block"></i>
+                            <span class="text-xs text-stone-200 font-semibold">علب وتغليفات الحلويات والمطاعم</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] bg-orange-100 text-orange-800 px-2 py-0.5 rounded-md font-medium">تغليف مطاعم</span>
+                        <h4 class="font-bold text-base text-stone-900 mt-1">علب فاخرة للحلويات والمأكولات</h4>
+                        <p class="text-stone-500 text-xs mt-1 leading-relaxed">تصاميم راقية بألوان متعددة مع طباعة الهوية البصرية بدقة عالية.</p>
+                    </div>
+                </div>
+                <div class="p-4 pt-0 border-t border-stone-50 mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-stone-400 block">السعر التقريبي</span>
+                        <span class="font-bold text-amber-700 text-sm">0.15 $ / للقطعة</span>
+                    </div>
+                    <button onclick="openOrderModal('علب فاخرة للحلويات والمأكولات', '0.15 $')" class="bg-stone-900 hover:bg-amber-600 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition cursor-pointer">اطلب الآن</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- قسم الربط المحاسبي -->
+    <section id="integration" class="bg-stone-900 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">تكامل تقني مع نظام الأصيل والمحاسبة</span>
+                <h3 class="text-2xl md:text-3xl font-bold mt-4 mb-4">وداعاً للعشوائية: ربط الموقع بالمخازن والحسابات</h3>
+                <p class="text-stone-300 text-sm leading-relaxed mb-6">كل طلب يتم عبر هذا الموقع من أي زبون أو مطعم يتم مزامنته تلقائياً مع نظام المحاسبة الخاص بالمطبعة، لتحديث كميات المخزون، تسجيل بيانات العميل، وإصدار الفواتير بدون أي أخطاء بشرية.</p>
+                <ul class="space-y-3 text-sm text-stone-300">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> إرسال نصوص كروت الأعراس جاهزة ومصححة مباشرة.</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> خصم المواد الخام وكراتين الوجبات من المخزون فورياً.</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> تنظيم الطلبيات ومتابعتها بكل سهولة ويسر.</li>
+                </ul>
+            </div>
+            <div class="bg-stone-800 border border-stone-700 p-6 rounded-2xl shadow-xl">
+                <div class="flex items-center justify-between pb-4 border-b border-stone-700 mb-4">
+                    <span class="text-xs font-bold text-amber-400">محاكي النظام البرمجي للربط</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                </div>
+                <div class="space-y-3 font-mono text-xs text-stone-300">
+                    <div class="bg-stone-900 p-3 rounded-xl border border-stone-700">
+                        <span class="text-amber-500">POST</span> /api/v1/sharaf/orders<br>
+                        <span class="text-stone-500">{ item: "BX-01", qty: 3000, client: "مطعم سيسونو" }</span>
+                    </div>
+                    <div class="bg-stone-900 p-3 rounded-xl border border-stone-700">
+                        <span class="text-emerald-400">SYNCED:</span> تم ربط الطلبية بنظام الأصيل المحاسبي وتوليد الفاتورة بنجاح.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة الطلب المنبثقة -->
+    <div id="orderModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <button onclick="closeOrderModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-700 text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+            <h4 class="font-bold text-lg text-stone-900 mb-1">تقديم طلب أو استفسار</h4>
+            <p class="text-xs text-stone-500 mb-4" id="modalItemTitle">المنتج المحدد</p>
+            
+            <form onsubmit="submitOrder(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">الاسم أو اسم المنشأة / العريس</label>
+                    <input type="text" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-amber-600" placeholder="أدخل اسمك أو اسم مطعمك">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">رقم الجوال للتواصل</label>
+                    <input type="tel" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-amber-600" placeholder="059xxxxxxx">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">الكمية المطلوبة</label>
+                    <input type="number" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-amber-600" placeholder="مثال: 500 كرت أو 2000 علبة">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">ملاحظات أو تفاصيل النصوص والتصميم</label>
+                    <textarea rows="3" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-amber-600" placeholder="اكتب التفاصيل، النصوص، أو القياسات المطلوبة..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-xs cursor-pointer mt-2">إرسال الطلب للمطبعة</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer class="bg-stone-950 text-stone-400 py-8 text-center text-xs border-t border-stone-800">
+        <p>جميع الحقوق محفوظة © 2026 - مطبعة أبو شرف | تطوير وتصميم البرمجيات والأنظمة (Al-Nakhal Software Solutions)</p>
+    </footer>
+
+    <!-- جافاسكريبت التفاعل -->
+    <script>
+        function filterProducts(category) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-amber-600', 'text-white');
+                btn.classList.add('bg-white', 'text-stone-700');
+            });
+            event.target.classList.add('active', 'bg-amber-600', 'text-white');
+            event.target.classList.remove('bg-white', 'text-stone-700');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openOrderModal(itemName, itemPrice) {
+            document.getElementById('modalItemTitle').innerText = `المنتج: ${itemName} (السعر التقريبي: ${itemPrice})`;
+            document.getElementById('orderModal').classList.remove('hidden');
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            alert('تم إرسال طلبك بنجاح إلى مطبعة أبو شرف! سيتم مراجعته عبر النظام المحاسبي والتواصل معك.');
+            closeOrderModal();
+        }
+    </script>
+</body>
+</html>
