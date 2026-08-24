@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مطبعة أبو شرف | أطلس الأفراح وتغليفات المطاعم</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3ECDB;
+  --paper-deep:#E9DFC4;
+  --ink:#211B14;
+  --ink-soft:#4A4032;
+  --gold:#B08A34;
+  --gold-light:#D8B463;
+  --wine:#6E1B26;
+  --wine-deep:#4A0F17;
+  --emerald:#0F3B2E;
+  --emerald-light:#1C5C46;
+  --line:#D8C79C;
+}
+*{box-sizing:border-box}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+}
+.font-display{font-family:'Amiri',serif;}
+.font-script{font-family:'Great Vibes',cursive; line-height:1;}
+.font-mono{font-family:'JetBrains Mono',monospace;}
+
+.grain{position:relative;isolation:isolate;}
+.grain::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hairline{border-color:var(--line);}
+.seal{
+  background:radial-gradient(circle at 35% 30%, var(--gold-light), var(--gold) 55%, #8a6a24 100%);
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.25), 0 2px 6px rgba(0,0,0,.25);
+}
+.seal-ring{border:1.5px dashed rgba(33,27,20,.35);}
+.eyebrow{letter-spacing:.14em;}
+
+.swatch{
+  border-radius:6px;
+  box-shadow:0 18px 34px -14px rgba(20,15,8,.45);
+  transition:transform .35s ease;
+}
+.swatch:hover{transform:translateY(-6px) rotate(0deg) !important;}
+
+.card-tag{font-family:'JetBrains Mono',monospace; letter-spacing:.02em;}
+
+.product-card{
+  border-radius:8px;
+  background:#fffdf8;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 22px 40px -20px rgba(20,15,8,.35);
+  border-color:var(--gold);
+}
+
+.pill{
+  border-radius:999px;
+  transition:all .2s ease;
+}
+.pill.active{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+
+.btn-gold{
+  background:linear-gradient(180deg, var(--gold-light), var(--gold));
+  color:#241B0B;
+  transition:filter .2s ease, transform .2s ease;
+}
+.btn-gold:hover{filter:brightness(1.08); transform:translateY(-1px);}
+
+.btn-ink{
+  background:var(--ink);
+  color:var(--paper);
+}
+.btn-ink:hover{background:var(--wine-deep);}
+
+.receipt{
+  background:#FBF7EC;
+  position:relative;
+  border-radius:2px;
+}
+.receipt::before{
+  content:'';
+  position:absolute; top:-9px; right:0; left:0; height:18px;
+  background-image:radial-gradient(circle at center, var(--ink) 0 6px, transparent 6.5px);
+  background-size:22px 18px;
+  background-position:0 0;
+  background-repeat:repeat-x;
+}
+
+.category-badge-wed{background:#F4E4E7;color:var(--wine-deep);}
+.category-badge-box{background:#E6EFE9;color:var(--emerald);}
+.category-badge-wrap{background:#EAF1EA;color:var(--emerald-light);}
+.category-badge-sti{background:#F0E9D8;color:var(--gold);}
+
+.divider-torn{
+  height:14px;
+  background:
+    linear-gradient(135deg, var(--paper) 25%, transparent 25.5%) 0 0,
+    linear-gradient(225deg, var(--paper) 25%, transparent 25.5%) 0 0;
+  background-size:14px 14px;
+  background-color:var(--ink);
+}
+
+::selection{background:var(--gold-light); color:var(--ink);}
+.whatsapp-float{box-shadow:0 10px 24px -8px rgba(0,0,0,.4);}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ===================== الهيدر ===================== -->
+<header class="bg-[var(--paper)]/95 backdrop-blur-sm sticky top-0 z-50 border-b hairline">
+  <div class="max-w-7xl mx-auto px-4 py-3 sm:py-3.5 flex justify-between items-center">
+    <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+      <div class="seal seal-ring w-9 h-9 sm:w-11 sm:h-11 shrink-0 rounded-full flex items-center justify-center font-display font-bold text-base sm:text-lg text-[#241B0B]">أش</div>
+      <div class="min-w-0">
+        <div class="flex items-baseline gap-2">
+          <h1 class="font-display font-bold text-base sm:text-lg text-[var(--ink)] leading-tight truncate">مطبعة أبو شرف</h1>
+          <span class="font-script text-xl sm:text-2xl text-[var(--gold)] hidden sm:inline">Sharaf</span>
+        </div>
+        <p class="text-[10px] sm:text-[11px] text-[var(--ink-soft)] eyebrow hidden xs:block truncate">كروت أفراح · تغليف مطاعم · غزة، فلسطين</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-7 text-sm font-medium text-[var(--ink-soft)]">
+      <a href="#catalog" class="hover:text-[var(--wine)] transition">الكتالوج</a>
+      <a href="#how" class="hover:text-[var(--wine)] transition">آلية الطلب</a>
+      <a href="#integration" class="hover:text-[var(--wine)] transition">الربط المحاسبي</a>
+      <a href="#contact" class="hover:text-[var(--wine)] transition">تواصل</a>
+    </nav>
+    <div class="flex items-center gap-2 shrink-0">
+      <a href="#catalog" class="btn-gold px-3 sm:px-4 py-2 rounded-md text-[11px] sm:text-sm font-bold transition whitespace-nowrap">تصفّح التشكيلة</a>
+      <button onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 flex items-center justify-center rounded-md border hairline text-[var(--ink-soft)] cursor-pointer"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden border-t hairline bg-[var(--paper)] px-4 py-3 flex flex-col gap-3 text-sm font-medium text-[var(--ink-soft)]">
+    <a href="#catalog" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">الكتالوج</a>
+    <a href="#how" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">آلية الطلب</a>
+    <a href="#integration" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">الربط المحاسبي</a>
+    <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-[var(--wine)] transition">تواصل</a>
+  </nav>
+</header>
+
+<!-- ===================== الهيرو ===================== -->
+<section class="grain relative overflow-hidden" style="background:linear-gradient(180deg, var(--ink) 0%, #171209 100%);">
+  <div class="max-w-7xl mx-auto px-4 py-20 md:py-24 grid md:grid-cols-2 gap-14 items-center relative z-10">
+    <div class="text-right">
+      <span class="inline-block text-[11px] eyebrow font-semibold uppercase text-[var(--gold-light)] border border-[var(--gold)]/40 rounded-full px-3.5 py-1.5">مطبعة أبو شرف — غزة</span>
+      <span class="font-script text-5xl md:text-6xl text-[var(--gold-light)] block mt-4">Sharaf cards</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--paper)] mt-3 mb-5 leading-[1.3]">
+        كل مناسبة لها ورقتها،<br><span class="text-[var(--gold-light)]">وكل مطعم له تغليفه</span>
+      </h2>
+      <p class="text-[#D8CDB8] text-sm md:text-base leading-relaxed max-w-md mb-8">
+        من كرت العرس المختوم بالشمع، إلى كرتون الوجبة الحامل لشعار مطعمك — طلب سريع ومباشر بخطوات ذكية تشبه أفضل المتاجر.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#catalog" class="btn-gold px-6 py-3 rounded-md font-bold text-sm">اطلب تصميمك الآن</a>
+        <a href="https://wa.me/972597501000" target="_blank" class="border border-[var(--gold)]/40 text-[var(--paper)] hover:bg-white/5 px-6 py-3 rounded-md text-sm font-medium transition flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> تواصل واتساب
+        </a>
+      </div>
+    </div>
+    <div class="relative h-[360px] md:h-[420px] hidden sm:block">
+      <div class="swatch absolute w-44 h-60 left-6 top-4 rotate-[-9deg] z-10" style="background:linear-gradient(160deg,#1c1712,#2b2116); border:1px solid rgba(216,180,99,.4);">
+        <div class="h-full w-full flex flex-col items-center justify-center gap-2 text-[var(--gold-light)]">
+          <i class="fa-solid fa-envelope-open-text text-2xl"></i>
+          <span class="font-display text-sm">مخمل + ختم شمعي</span>
+        </div>
+      </div>
+      <div class="swatch absolute w-44 h-60 left-32 top-24 rotate-[6deg] z-20" style="background:#F2C230;">
+        <div class="h-full w-full flex flex-col items-center justify-center gap-2 text-[#241B0B]">
+          <i class="fa-solid fa-box-open text-2xl"></i>
+          <span class="font-display text-sm">Sharing Box</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-torn"></div>
+
+<!-- ===================== الكتالوج ===================== -->
+<section id="catalog" class="max-w-7xl mx-auto px-4 py-16">
+  <div class="text-center mb-10">
+    <span class="text-[11px] eyebrow font-semibold uppercase text-[var(--gold)]">كتالوج المنتجات</span>
+    <h3 class="font-display text-2xl md:text-3xl font-bold text-[var(--ink)] mt-2">اختر الصنف وابدأ طلبك الفوري</h3>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-2 mb-10" id="filter-buttons">
+    <button onclick="filterProducts('all', this)" class="category-btn pill active px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer">الكل</button>
+    <button onclick="filterProducts('weddings', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer">💍 كروت الأعراس</button>
+    <button onclick="filterProducts('boxes', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer">📦 كراتين وبوكسات</button>
+    <button onclick="filterProducts('wraps', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer">🍔 تغليف الساندويش</button>
+    <button onclick="filterProducts('stickers', this)" class="category-btn pill px-4 py-2 text-xs md:text-sm font-semibold bg-white text-[var(--ink-soft)] border hairline cursor-pointer">🏷️ ستكرز وملصقات</button>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" id="products-grid">
+    <!-- منتج 1 -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="weddings" data-id="WD-01" data-name="الكرت الملكي المخمل (أسود وذهبي)" data-price="0.50">
+      <div>
+        <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(160deg,#221A12,#3A2B1A);">
+          <span class="card-tag absolute top-3 right-3 bg-white/90 text-[10px] font-semibold px-2 py-1 rounded text-[var(--ink-soft)]">WD-01</span>
+          <div class="text-center px-4">
+            <i class="fa-solid fa-envelope-open-text text-2xl mb-2 text-[var(--gold-light)] block"></i>
+            <span class="text-xs text-[#E9DEC4] font-semibold">كرت مخملي بختم شمعي</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] category-badge-wed px-2 py-0.5 rounded font-medium">كروت أعراس</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">الكرت الملكي المخمل (أسود وذهبي)</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">ورق مخملي فاخر مع ختم شمعي بارز وطباعة ذهبية راقية.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.50 $ / للكرت</span>
+        </div>
+        <button onclick="openQuickOrder('WD-01', 'الكرت الملكي المخمل (أسود وذهبي)', 0.50)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer">اطلب الآن</button>
+      </div>
+    </div>
+
+    <!-- منتج 2 -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="boxes" data-id="BX-01" data-name="كرتون برجر ووجبات (بوكس مشاركة)" data-price="0.10">
+      <div>
+        <div class="h-44 flex items-center justify-center relative" style="background:#F2C230;">
+          <span class="card-tag absolute top-3 right-3 bg-white/90 text-[10px] font-semibold px-2 py-1 rounded text-[var(--ink-soft)]">BX-01</span>
+          <div class="text-center px-4">
+            <i class="fa-solid fa-box-open text-2xl mb-2 text-[#241B0B] block"></i>
+            <span class="text-xs text-[#241B0B] font-bold">بوكس المشاركة (Sharing Box)</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] category-badge-box px-2 py-0.5 rounded font-medium">تغليف مطاعم</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">كرتون برجر ووجبات (بوكس مشاركة)</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">تصميم مطبوع بشعار المطعم، ورق صحي مقاوم للزيوت.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.10 $ / للقطعة</span>
+        </div>
+        <button onclick="openQuickOrder('BX-01', 'كرتون برجر ووجبات (بوكس مشاركة)', 0.10)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer">اطلب الآن</button>
+      </div>
+    </div>
+
+    <!-- منتج 3 -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="wraps" data-id="WR-01" data-name="ورق ساندويش مانع للزيوت" data-price="0.05">
+      <div>
+        <div class="h-44 flex items-center justify-center relative" style="background:var(--emerald);">
+          <span class="card-tag absolute top-3 right-3 bg-white/90 text-[10px] font-semibold px-2 py-1 rounded text-[var(--ink-soft)]">WR-01</span>
+          <div class="text-center px-4">
+            <i class="fa-solid fa-scroll text-2xl mb-2 text-[#CDE7DA] block"></i>
+            <span class="text-xs text-[#CDE7DA] font-semibold">ورق تغليف مطبوع للمطاعم</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] category-badge-wrap px-2 py-0.5 rounded font-medium">ورق مطاعم</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">ورق ساندويش مانع للزيوت (شعار مطعمك)</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">مطبوع بألوان هوية مطعمك، ممتاز للساندويشات والبرجر.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">حسب الكمية</span>
+        </div>
+        <button onclick="openQuickOrder('WR-01', 'ورق ساندويش مانع للزيوت', 0.05)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer">اطلب الآن</button>
+      </div>
+    </div>
+
+    <!-- منتج 4 -->
+    <div class="product-card border hairline overflow-hidden flex flex-col justify-between" data-category="stickers" data-id="ST-01" data-name="ستكرز إغلاق العلب والمنتجات" data-price="0.02">
+      <div>
+        <div class="h-44 flex items-center justify-center relative" style="background:#EDE3CC;">
+          <span class="card-tag absolute top-3 right-3 bg-white/90 text-[10px] font-semibold px-2 py-1 rounded text-[var(--ink-soft)]">ST-01</span>
+          <div class="text-center px-4">
+            <i class="fa-solid fa-tags text-2xl mb-2 text-[var(--gold)] block"></i>
+            <span class="text-xs text-[var(--ink-soft)] font-semibold">ملصقات وعلامات تجارية</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <span class="text-[11px] category-badge-sti px-2 py-0.5 rounded font-medium">ملصقات</span>
+          <h4 class="font-display font-bold text-base text-[var(--ink)] mt-1.5">ستكرز إغلاق العلب والمنتجات</h4>
+          <p class="text-[var(--ink-soft)] text-xs mt-1 leading-relaxed">لاصق قوي مقاوم للرطوبة، بقصّة مخصصة حسب الطلب.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0 border-t hairline mt-3 flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-[var(--ink-soft)] block">السعر التقديري</span>
+          <span class="font-bold text-[var(--wine)] text-sm">0.02 $ / للقطعة</span>
+        </div>
+        <button onclick="openQuickOrder('ST-01', 'ستكرز إغلاق العلب والمنتجات', 0.02)" class="btn-ink text-xs font-semibold px-3.5 py-2 rounded-md transition cursor-pointer">اطلب الآن</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== نظام الطلب السريع (مثل سنبل) - نافذة منبثقة تفاعلية ===================== -->
+<div id="orderModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div class="bg-[var(--paper)] max-w-lg w-full p-6 shadow-2xl relative rounded-xl border hairline">
+    <button onclick="closeOrderModal()" class="absolute top-4 left-4 text-[var(--ink-soft)] hover:text-[var(--wine)] text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+    
+    <!-- رأس النافذة -->
+    <div class="flex items-center gap-3 pb-4 border-b hairline mb-4">
+      <div class="w-10 h-10 rounded-lg bg-[var(--ink)] text-[var(--paper)] flex items-center justify-center text-lg font-bold">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <div>
+        <h4 id="modalItemTitle" class="font-display font-bold text-lg text-[var(--ink)]">اسم المنتج</h4>
+        <p class="text-xs text-[var(--wine)] font-semibold" id="modalItemPrice">السعر</p>
+      </div>
+    </div>
+
+    <!-- نموذج الطلب السريع -->
+    <form onsubmit="submitSonbolOrder(event)" class="space-y-4">
+      <input type="hidden" id="inputProductId">
+      <input type="hidden" id="inputProductName">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">اسم العميل / المنشأة <span class="text-red-600">*</span></label>
+          <input id="orderName" type="text" required class="w-full bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]" placeholder="مثال: مطعم سيسونو أو عريسنا">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">رقم الجوال (واتساب) <span class="text-red-600">*</span></label>
+          <input id="orderPhone" type="tel" required class="w-full bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]" placeholder="059xxxxxxx">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">الكمية المطلوبة <span class="text-red-600">*</span></label>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="adjustQty(-100)" class="bg-white border hairline px-3 py-2 rounded-md text-sm font-bold cursor-pointer hover:bg-stone-100">-</button>
+            <input id="orderQty" type="number" min="50" value="500" required class="w-full text-center bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]">
+            <button type="button" onclick="adjustQty(100)" class="bg-white border hairline px-3 py-2 rounded-md text-sm font-bold cursor-pointer hover:bg-stone-100">+</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">التكلفة التقريبية الإجمالية</label>
+          <div id="totalEstimation" class="w-full bg-white/70 border hairline rounded-md px-3 py-2 text-sm font-bold text-[var(--wine)] flex items-center justify-center">
+            0.00 $
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-[var(--ink-soft)] mb-1">تفاصيل النصوص أو الألوان أو الشعار</label>
+        <textarea id="orderNotes" rows="2" class="w-full bg-white border hairline rounded-md px-3 py-2 text-sm focus:outline-none focus:border-[var(--gold)]" placeholder="اكتب ملاحظاتك، أسماء العروسين، أو ملاحظات طباعة الشعار..."></textarea>
+      </div>
+
+      <!-- أزرار الإجراء السريع (مثل سنبل) -->
+      <div class="pt-2">
+        <button type="submit" class="btn-gold w-full font-bold py-3 rounded-md text-sm transition cursor-pointer flex items-center justify-center gap-2 shadow-md">
+          <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب واعتماده فوراً
+        </button>
+        <p class="text-[10px] text-[var(--ink-soft)] text-center mt-2">سيتم فتح محادثة واتساب بتفاصيل الطلب الكاملة لرابطها مباشرة مع النظام المحاسبي.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- زر واتساب عائم -->
+<a href="https://wa.me/972597501000" target="_blank" class="whatsapp-float fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center text-white text-2xl transition">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ===================== تواصل ===================== -->
+<section id="contact" class="max-w-4xl mx-auto px-4 py-16 text-center">
+  <span class="text-[11px] eyebrow font-semibold uppercase text-[var(--gold)]">جاهزون نبدأ</span>
+  <h3 class="font-display text-2xl md:text-3xl font-bold text-[var(--ink)] mt-2 mb-4">فرجينا كرتك، أو تصميم تغليفك — ونحوله لهوية مطبوعة</h3>
+  <div class="flex flex-wrap justify-center gap-3 mb-8">
+    <a href="https://wa.me/972597501000" target="_blank" class="btn-gold px-6 py-3 rounded-md font-bold text-sm flex items-center gap-2"><i class="fa-brands fa-whatsapp"></i> راسلنا واتساب</a>
+    <a href="https://www.facebook.com/AboSharafPrinting" target="_blank" class="border hairline px-6 py-3 rounded-md text-sm font-medium text-[var(--ink-soft)] hover:bg-white transition flex items-center gap-2"><i class="fa-brands fa-facebook text-[#1877F2]"></i> صفحتنا على فيسبوك</a>
+  </div>
+  <div class="text-xs text-[var(--ink-soft)]">
+    <span><i class="fa-solid fa-location-dot text-[var(--gold)] ml-1.5"></i>غزة - السامر - بجوار مستشفى العامة للقلب والأوعية الدموية، فلسطين</span>
+  </div>
+</section>
+
+<!-- ===================== التذييل ===================== -->
+<footer class="bg-[var(--ink)] text-[#B9AD91] py-8 text-center text-xs border-t hairline">
+  <p>جميع الحقوق محفوظة © 2026 - مطبعة أبو شرف · 059-750-1000 | تطوير وتصميم الأنظمة (Al-Nakhal Software Solutions)</p>
+</footer>
+
+<script>
+const SHOP_WHATSAPP = '972597501000';
+let activeUnitPrice = 0;
+
+function filterProducts(category, btn){
+  document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.display = (category === 'all' || card.getAttribute('data-category') === category) ? 'flex' : 'none';
+  });
+}
+
+function openQuickOrder(id, name, price){
+  activeUnitPrice = price;
+  document.getElementById('inputProductId').value = id;
+  document.getElementById('inputProductName').value = name;
+  document.getElementById('modalItemTitle').innerText = name;
+  document.getElementById('modalItemPrice').innerText = price > 0 ? `السعر التقديري: ${price} $ للقطعة` : 'السعر يعتمد على الكمية';
+  
+  updateTotalEstimation();
+  document.getElementById('orderModal').classList.remove('hidden');
+}
+
+function closeOrderModal(){
+  document.getElementById('orderModal').classList.add('hidden');
+}
+
+function adjustQty(amount){
+  const qtyInput = document.getElementById('orderQty');
+  let val = parseInt(qtyInput.value) || 50;
+  val += amount;
+  if(val < 10) val = 10;
+  qtyInput.value = val;
+  updateTotalEstimation();
+}
+
+document.getElementById('orderQty').addEventListener('input', updateTotalEstimation);
+
+function updateTotalEstimation(){
+  const qty = parseInt(document.getElementById('orderQty').value) || 0;
+  const total = qty * activeUnitPrice;
+  const estimationEl = document.getElementById('totalEstimation');
+  if(activeUnitPrice > 0){
+    estimationEl.innerText = `${total.toFixed(2)} $ (تقريبي)`;
+  } else {
+    estimationEl.innerText = `يُحدد لاحقاً حسب الكمية`;
+  }
+}
+
+function submitSonbolOrder(e){
+  e.preventDefault();
+
+  const id    = document.getElementById('inputProductId').value;
+  const pName = document.getElementById('inputProductName').value;
+  const name  = document.getElementById('orderName').value.trim();
+  const phone = document.getElementById('orderPhone').value.trim();
+  const qty   = document.getElementById('orderQty').value.trim();
+  const notes = document.getElementById('orderNotes').value.trim();
+
+  const lines = [
+    '🔔 *طلب جديد عبر الموقع الإلكتروني*',
+    `📦 الصنف: [${id}] ${pName}`,
+    `🔢 الكمية المطلوبة: ${qty}`,
+    `👤 اسم العميل: ${name}`,
+    `📱 جوال التواصل: ${phone}`,
+  ];
+  if(notes) lines.push(`📝 ملاحظات: ${notes}`);
+
+  const message = encodeURIComponent(lines.join('\n'));
+  window.open(`https://wa.me/${SHOP_WHATSAPP}?text=${message}`, '_blank');
+
+  closeOrderModal();
+}
+
+function toggleMobileMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+}
+</script>
+</body>
+</html>
